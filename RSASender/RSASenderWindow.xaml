@@ -1,0 +1,38 @@
+﻿<Window x:Class="RSASender.RSASenderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RSASender"
+        mc:Ignorable="d"
+        Title="RSA Sender" Height="280" Width="620" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="600"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="120"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Grid.Column="0" BorderThickness="1" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="Black" Margin="10,10,10,10" Height="100" Width="580">
+            <Grid>
+                <Label Content="Public Data" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top"/>
+
+                <Label Content="Exponent:" HorizontalAlignment="Left" Margin="0,20,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="ExponentTextBox" HorizontalAlignment="Left" Margin="113,20,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450"/>
+
+                <Label Content="Modulus:" HorizontalAlignment="Left" Margin="0,40,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="ModulusTextBox" HorizontalAlignment="Left" Margin="113,40,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="450"/>
+                <Button Content="Set Public Key" HorizontalAlignment="Left" Margin="5,70,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+            </Grid>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="0" BorderThickness="1" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="Black" Margin="10,10,10,10" Height="100" Width="580">
+            <Grid>
+                <Button Content="Encrypt Message" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Click="EncryptMessage_Click" />
+                <TextBox x:Name="PlainTextMessage" HorizontalAlignment="Left" Margin="113,10,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="450"/>
+                <Label Content="Encrypted Message:" HorizontalAlignment="Left" Margin="0,35,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="EncryptedMessage" HorizontalAlignment="Left" Margin="113,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="450"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
